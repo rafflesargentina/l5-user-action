@@ -1,0 +1,47 @@
+{
+    "name": "rafflesargentina/l5-user-action",
+    "description": "UserAction Service Provider for Laravel 5",
+    "keywords": [
+        "laravel", "user", "action"
+    ],
+    "homepage": "https://github.com/rafflesargentina/l5-user-action",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mario Patronelli",
+            "email": "mario@raffles.com.ar",
+            "homepage": "http://raffles.com.ar",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0.0",
+        "laravel/framework": "5.5.*",
+        "laracasts/presenter": "^0.2.1",
+        "rafflesargentina/l5-filterable-sortable": "^1.5",
+        "rafflesargentina/l5-resource-controller": "^1.5"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "RafflesArgentina\\UserAction\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RafflesArgentina\\UserAction\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
