@@ -100,7 +100,7 @@ class UserAction extends Model
      */
     public function __construct(array $attributes = [])
     {
-        $this->table = config($this->package.'.user-action.table_name') ?: 'user-actions';
+        $this->table = config($this->package.'.user-action.table_name') ?: 'user_actions';
         $this->filters = config($this->package.'.user-action.filters') ?: UserActionFilters::class;
         $this->perPage = config($this->package.'.per_page') ?: '25';
         $this->sorters = config($this->package.'.user-action.sorters') ?: UserActionSorters::class;
