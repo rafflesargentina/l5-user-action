@@ -4,7 +4,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-User Role & Permission Service Provider for Laravel 5
+UserAction Service Provider for Laravel 5
 
 ## Install
 
