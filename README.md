@@ -1,10 +1,10 @@
-# UserAction Service Provider for Laravel 5
+# User Action Service Provider for Laravel 5
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-UserAction Service Provider for Laravel 5
+User Action Service Provider for Laravel 5
 
 ## Install
 
