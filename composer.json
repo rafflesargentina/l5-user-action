@@ -1,6 +1,6 @@
 {
     "name": "rafflesargentina/l5-user-action",
-    "description": "UserAction Service Provider for Laravel 5",
+    "description": "User Action Service Provider for Laravel 5",
     "keywords": [
         "laravel", "user", "action"
     ],
