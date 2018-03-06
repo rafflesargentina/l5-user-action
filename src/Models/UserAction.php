@@ -57,7 +57,7 @@ class UserAction extends Model
     protected $fillable = [
         'after',
         'model',
-        'user-action',
+        'action',
         'before',
         'user_id',
         'model_id',
