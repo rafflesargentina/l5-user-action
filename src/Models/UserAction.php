@@ -9,6 +9,7 @@ use RafflesArgentina\FilterableSortable\FilterableSortableTrait;
 
 use RafflesArgentina\UserAction\Filters\UserActionFilters;
 use RafflesArgentina\UserAction\Sorters\UserActionSorters;
+use RafflesArgentina\UserAction\Presenters\UserActionPresenter;
 
 class UserAction extends Model
 {
