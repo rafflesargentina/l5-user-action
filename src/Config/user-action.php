@@ -1,9 +1,13 @@
 <?php
 
 return [
-    /* Logging */
-    'log_events_to_db' => true,
-    'log_events_to_file' => true,
+    /* Routing */
+    'alias' => null,
+    'theme' => null,
+    'module' => 'user-action',
+    'prefix' => null,
+    'api_routes_middleware' => null,
+    'web_routes_middleware' => null,
 
     /* UserAction model properties */
     'user-action' => [
@@ -14,7 +18,7 @@ return [
         'connection' => null,
         'date_format' => 'd/m/Y',
         'form_request' => null,
-        'resource_name' => 'auditoria',
+        'resource_name' => 'acciones-de-usuario',
         'route_key_name' => 'id',
     ],
 ];
