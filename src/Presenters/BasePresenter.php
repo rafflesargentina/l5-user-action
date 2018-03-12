@@ -13,7 +13,7 @@ class BasePresenter extends Presenter
 
     public function deleted_at()
     {
-        return $this->entity->deleted_at ?? $this->entity->deleted_at->format($this->entity->date_format);
+        return $this->entity->deleted_at ? $this->entity->deleted_at->format($this->entity->date_format) : null;
     }
 
     public function updated_at()
