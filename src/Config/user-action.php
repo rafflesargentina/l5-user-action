@@ -9,6 +9,8 @@ return [
     'api_routes_middleware' => null,
     'web_routes_middleware' => null,
 
+    'user_model' => null,
+
     /* UserAction model properties */
     'user-action' => [
         'model' => null,

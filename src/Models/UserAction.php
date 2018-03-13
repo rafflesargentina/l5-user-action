@@ -107,7 +107,7 @@ class UserAction extends Model
         $this->sorters = config($this->package.'.user-action.sorters') ?: UserActionSorters::class;
         $this->presenter = config($this->package.'.user-action.presenter') ?: UserActionPresenter::class;
         $this->connection = config($this->package.'.user-action.connection');
-        $this->user_model = config($this->package.'.user.model');
+        $this->user_model = config($this->package.'.user_model');
         $this->date_format = config($this->package.'.user-action.date_format');
 
         parent::__construct($attributes);
@@ -121,10 +121,5 @@ class UserAction extends Model
     public function user()
     {
         return $this->belongsTo($this->user_model, 'user_id');
-    }
-
-    public function model()
-    {
-        return $this->belongsTo($this->user-action_model, 'model_id');
     }
 }
