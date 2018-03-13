@@ -8,10 +8,33 @@ $factory->define(\RafflesArgentina\UserAction\Models\User::class, function (\Fak
     ];
 });
 
-$factory->define(\RafflesArgentina\UserAction\Models\UserAction::class, function (\Faker\Generator $faker) {
+$factory->define(\RafflesArgentina\UserAction\Models\Article::class, function (\Faker\Generator $faker) {
     return [
-        'model' => $faker->word,
-        'action' => $faker->word,
-        'model_id' => rand(0,3),
+        'title' => $faker->text,
+        'body' => $faker->text,
+        'user_id' => factory(\RafflesArgentina\UserAction\Models\User::class)->create()->id,
+    ];
+});
+
+$actions = [
+    'retrieved',
+    'creating',
+    'created',
+    'updating',
+    'updated',
+    'saving',
+    'saved',
+    'deleting',
+    'deleted',
+    'restoring',
+    'restored'
+];
+
+$factory->define(\RafflesArgentina\UserAction\Models\UserAction::class, function (\Faker\Generator $faker) use ($actions) {
+    return [
+        'model' => 'Article',
+        'action' => array_rand($actions, 1),
+        'user_id' => factory(\RafflesArgentina\UserAction\Models\User::class)->create()->id,
+        'model_id' => factory(\RafflesArgentina\UserAction\Models\Article::class)->create()->id,
     ];
 });

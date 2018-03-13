@@ -20,4 +20,11 @@ class UserActionModelTest extends TestCase
     {
         return [];
     }
+
+    function testRecordBelongsToUser()
+    {
+        $userAction = factory(UserAction::class)->create();
+
+        $this->assertTrue($userAction->user instanceof \RafflesArgentina\UserAction\Models\User);
+    }
 }
