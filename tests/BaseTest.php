@@ -21,6 +21,7 @@ trait BaseTest
         'filters',
         'package',
         'sorters',
+        'presenter',
         'date_format',
     ];
 
@@ -52,7 +53,8 @@ trait BaseTest
             'prefix'   => '',
         ]);
 
-        $app['config']->set('web_routes_middleware', \Illuminate\View\Middleware\ShareErrorsFromSession::class);
+        $app['config']->set($this->package.'.user_model', \RafflesArgentina\UserAction\Models\User::class);
+        $app['config']->set($this->package.'.web_routes_middleware', \Illuminate\View\Middleware\ShareErrorsFromSession::class);
     }
 
     //protected function getPackageAliases($app)
