@@ -101,7 +101,7 @@ class BaseObserver
     private function logEventsToDB($model)
     {
         $user = auth()->user();
-        $class = class_basename($model);
+        $class = get_class($model);
         $trace = debug_backtrace();
         $event = $trace[2] ? $trace[2]['function'] : "Unknown event";
 
